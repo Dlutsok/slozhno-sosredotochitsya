@@ -3,8 +3,9 @@
 .page {
   --transition-duration: 0.25s;
   background: var(--background-image) no-repeat top center, var(--background-color);
-  background-size: auto 768px;
+  background-size: cover;
   background-attachment: fixed;
+  
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
 }
@@ -12,6 +13,8 @@
 .header {
   padding: 0 20px;
   position: relative;
+  min-height: 668px;
+  height: 100vh;
 }
 
 .header__rec {
@@ -46,6 +49,7 @@
 }
 
 .header__theme-menu-button {
+  text-transform: lowercase;
   font-size: 18px;
   font-weight: 400;
   color: var(--corner-color);
@@ -71,6 +75,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid;
+  pointer-events: none; 
 }
 
 .header__title {
@@ -87,6 +92,8 @@
   flex-direction: column;
   gap: 76px;
 }
+
+
 
 .header__subtitle {
   color: var(--article-title-color);
@@ -123,7 +130,7 @@
   color: var(--section-title-color);
 }
 
-.dark-title {
+.custom-title {
   color: var(--article-title-color);
 }
 
@@ -279,12 +286,15 @@
   margin: 0;
 }
 
+.section__image {
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (width >= 768px) {
   .section:last-of-type .section__image {
     -o-object-fit: cover;
-    object-fit: cover;
     -o-object-position: center;
-    object-position: center;
     width: 100%;
     height: 100%;
   }
@@ -329,9 +339,14 @@
 /* Footer */
 
 .footer {
-  padding: 282px 20px;
   position: relative;
   text-align: center;
+  min-height: 668px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .footer__title {
@@ -339,6 +354,32 @@
   font-weight: 700;
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--title-shadow);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
+  left: 20px;
+  bottom: 20px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--corner-color);
+  border-top: 1px solid var(--corner-color);
+  right: 20px;
+  top: 20px;
+}
+
+.title-decor {
+  background: var(--title-decor);
 }
 
 /* MEDIA */
@@ -445,5 +486,19 @@
   .footer {
     margin-top: 40px;
     padding: 262px 10px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::before {
+    left: 10px;
+    bottom: 17px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
   }
 }
