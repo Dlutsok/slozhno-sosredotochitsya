@@ -221,8 +221,7 @@
   }
 }
 
-.section-advices .section__article-list,
-.section-causes .section__article-list {
+.section__article-roster {
   flex: 0 0 auto;
   width: 66%;
   flex-direction: column;
