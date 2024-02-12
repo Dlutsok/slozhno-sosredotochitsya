@@ -410,7 +410,7 @@
 
 @media (width < 1024px) and (width >= 768px) {
   .header__theme-menu {
-    place-self: center;
+    place-self: end;
     justify-self: end;
     margin: 0;
   }
@@ -418,9 +418,10 @@
 
 @media (width < 768px) and (width >= 375px) {
   .header__theme-menu {
-    place-self: center;
+    place-self: end;
     justify-self: end;
     margin: 0;
+    padding: 0;
   }
 }
 
