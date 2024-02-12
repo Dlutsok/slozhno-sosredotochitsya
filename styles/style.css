@@ -5,7 +5,6 @@
   --transition-duration: 0.25s;
   background: var(--background-image) no-repeat top center, var(--background-color);
   background-size: cover;
-
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
 }
@@ -343,7 +342,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .footer__title {
