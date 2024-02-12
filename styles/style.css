@@ -129,6 +129,9 @@
 
 .section {
   line-height: 130%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .section__title {
@@ -198,12 +201,6 @@
 
 .section__article-text-link:focus-visible {
   outline: 1px solid var(--main-text-color);
-}
-
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .section__title {
