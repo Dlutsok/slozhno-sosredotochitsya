@@ -110,7 +110,7 @@
 }
 
 
-@media (width < 668px) {
+@media (width < 425px) {
   .header__subtitle {
     width: 100%;
   }
@@ -470,16 +470,9 @@
   }
 }
 
-@media (width < 1024px) and (width >= 768px) {
-  .footer {
-    padding: 434px 20px;
-  }
-}
-
 @media (width < 768px) and (width >= 375px) {
   .footer {
     margin-top: 40px;
-    padding: 262px 10px;
   }
 }
 
