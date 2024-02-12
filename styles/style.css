@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 .page {
+  background-attachment: fixed;
   --transition-duration: 0.25s;
   background: var(--background-image) no-repeat top center, var(--background-color);
   background-size: cover;
-  background-attachment: fixed;
-  
+
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
 }
@@ -336,8 +336,6 @@
   }
 }
 
-/* Footer */
-
 .footer {
   position: relative;
   text-align: center;
@@ -345,6 +343,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh; 
 }
 
 .footer__title {
